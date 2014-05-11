@@ -31,11 +31,11 @@ DFS Used%: 100.00%
 DFS Remaining%: 0.00%                                        
 
 error like:http://forum.hadoop.tw/viewtopic.php?f=4&t=38029
-Solve:
+                                                                                                                          Solve:
 
 sudo vim /etc/hosts
 127.0.0.1 master #delete this
-#127.0.0.1 master
+#127.0.0.1 master 把主节点master中的 /etc/hosts中的127.0.0.1 master 注释掉。
 then, start-all.sh and hadoop dfsadmin -safemode leave
 ,runing hdfs dfsadmin -report, it will ok!
 
