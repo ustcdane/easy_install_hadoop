@@ -136,7 +136,7 @@ echo "<configuration>
         <value>$master:18141</value>
         </property>
         <property>
-        <name>yarn.nodemanager.aux-services.mapreduce_shuffle.class</name>
+        <name>yarn.nodemanager.aux-services</name>
         <value>mapreduce_shuffle</value>
         </property>
 
