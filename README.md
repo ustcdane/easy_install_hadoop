@@ -14,18 +14,9 @@ Error：
 Hadoop 2.2.0 : “name or service not known” Warning
 Solve:http://stackoverflow.com/questions/21326274/hadoop-2-2-0-name-or-service-not-known-warning
 
-Fix BUg:
+Fix Bug:
 
 hadoop2.2.0启动中遇到的错误，slave节点上的NodeManger无法启动
 log为：mapreduce.shuffle set in yarn.nodemanager.aux-services is invalid 
-解决方法：
-yarn.site.xml参数配置的问题
-yarn.nodemanager.aux-services.mapreduce_shuffle.class部分的错误
-正确的是这样：
-<property>
- <name>yarn.nodemanager.aux-services.mapreduce_shuffle.class</name>
- <value>mapreduce_shuffle</value>
- <description>shuffle service that needs to be set for Map Reduce to run </description>
-</property> 
-
+解决方法：                                                                                                   yarn.site.xml参数配置的问题                                               yarn.nodemanager.aux-services.mapreduce_shuffle.class部分的错误                                                      正确的是这样：                                                                                                     <property>                                                                <name>yarn.nodemanager.aux-services.mapreduce_shuffle.class</name>                                   <value>mapreduce_shuffle</value>                                                                               <description>shuffle service that needs to be set for Map Reduce to run </description>                            </property>                                                                                                                          
 hadoop.sh已修正。
