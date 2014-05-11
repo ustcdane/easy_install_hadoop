@@ -9,3 +9,7 @@ Hadoop一键安装
 
 根据需要修改 $HADOOP_HOME/etc/hadoop/slaves 下的从节点等。
 运行脚本hadoop.sh 即可完成一键安装hadoop集群。
+
+Error：
+Hadoop 2.2.0 : “name or service not known” Warning
+Solve:http://stackoverflow.com/questions/21326274/hadoop-2-2-0-name-or-service-not-known-warning
