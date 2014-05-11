@@ -18,7 +18,8 @@ Fix Bug:
 
 hadoop2.2.0启动中遇到的错误，slave节点上的NodeManger无法启动
 log为：mapreduce.shuffle set in yarn.nodemanager.aux-services is invalid 
-解决方法：                                                                                                   yarn.site.xml参数配置的问题                                               yarn.nodemanager.aux-services.mapreduce_shuffle.class部分的错误                                                      正确的是这样：                                                                                                     <property>                                                                <name>yarn.nodemanager.aux-services.mapreduce_shuffle.class</name>                                   <value>mapreduce_shuffle</value>                                                                               <description>shuffle service that needs to be set for Map Reduce to run </description>                            </property>                                                                                                                          
+解决方法：                                                                                                  
+yarn.site.xml参数配置的问题                                               yarn.nodemanager.aux-services.mapreduce_shuffle.class部分的错误                                                      正确的是这样：                                                                                                     <property>                                                                <name>yarn.nodemanager.aux-services.mapreduce_shuffle.class</name>                                   <value>mapreduce_shuffle</value>                                                                               <description>shuffle service that needs to be set for Map Reduce to run </description>                            </property>                                                                                                                          
 hadoop.sh已修正。
 
 遇到的错误：
@@ -35,7 +36,7 @@ error like:http://forum.hadoop.tw/viewtopic.php?f=4&t=38029
 
 sudo vim /etc/hosts
 127.0.0.1 master #delete this
-#127.0.0.1 master 把主节点master中的 /etc/hosts中的127.0.0.1 master 注释掉。
+把主节点master中的 /etc/hosts中的127.0.0.1 master 注释掉。
 then, start-all.sh and hadoop dfsadmin -safemode leave
 ,runing hdfs dfsadmin -report, it will ok!
 
